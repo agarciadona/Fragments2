@@ -2,17 +2,20 @@ package com.example.fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link onBoarding0Fragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.example.fragments.databinding.FragmentOnBoarding0Binding;
+import com.example.fragments.databinding.FragmentOnboarding1Binding;
+
+
 public class onBoarding0Fragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -23,28 +26,15 @@ public class onBoarding0Fragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private FragmentOnBoarding0Binding binding;
+
+    NavController navController;
 
     public onBoarding0Fragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment onBoarding0Fragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static onBoarding0Fragment newInstance(String param1, String param2) {
-        onBoarding0Fragment fragment = new onBoarding0Fragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -61,4 +51,24 @@ public class onBoarding0Fragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_on_boarding0, container, false);
     }
-}
+
+
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        navController = Navigation.findNavController(view);
+        binding.button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.action_onBoarding0Fragment_to_onboarding1Fragment);
+            }
+        });
+        binding.skip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.action_onBoarding0Fragment_to_homeFragment);
+            }
+        });
+    }
+
+
+    }

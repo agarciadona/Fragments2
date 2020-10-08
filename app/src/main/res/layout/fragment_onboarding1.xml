@@ -17,13 +17,14 @@
         app:layout_constraintBottom_toTopOf="@+id/texto"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/texto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="!Discover the garlic soup!"
+        android:text="@string/discover_the_garlic_soup"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/botonSiguiente"
@@ -36,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#FFEB3B"
-        android:text="Next"
+        android:text="@string/next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -45,9 +46,9 @@
 
     <Button
         android:id="@+id/SkipButton"
-        android:layout_width="178dp"
-        android:layout_height="46dp"
-        android:text="Skip"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/skip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
