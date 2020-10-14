@@ -18,6 +18,7 @@
             android:id="@+id/action_onboarding1Fragment_to_onboarding2Fragment"
             app:destination="@id/onboarding2Fragment" />
         <action
+
             android:id="@+id/action_onboarding1Fragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
@@ -27,6 +28,10 @@
         android:label="fragment_onboarding2"
         tools:layout="@layout/fragment_onboarding2" >
         <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
             android:id="@+id/action_onboarding2Fragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
@@ -35,16 +40,26 @@
         android:name="com.example.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+
     <fragment
         android:id="@+id/onBoarding0Fragment"
         android:name="com.example.fragments.onBoarding0Fragment"
         android:label="fragment_on_boarding0"
         tools:layout="@layout/fragment_on_boarding0" >
         <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
             android:id="@+id/action_onBoarding0Fragment_to_onboarding1Fragment"
             app:destination="@id/onboarding1Fragment" />
         <action
+            app:enterAnim="@anim/alpha"
+            app:exitAnim="@anim/desalpha"
+            app:popEnterAnim="@anim/alpha"
+            app:popExitAnim="@anim/desalpha"
             android:id="@+id/action_onBoarding0Fragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+
 </navigation>

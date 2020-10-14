@@ -24,9 +24,6 @@ public class Onboarding1Fragment extends Fragment {
         // Required empty public constructor
     }
 
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -37,6 +34,7 @@ public class Onboarding1Fragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         navController = Navigation.findNavController(view);
+
         binding.botonSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,7 +44,7 @@ public class Onboarding1Fragment extends Fragment {
         binding.SkipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navController.navigate(R.id.action_onboarding2Fragment_to_homeFragment);
+                navController.navigate(R.id.action_onboarding1Fragment_to_homeFragment);
             }
         });
     }

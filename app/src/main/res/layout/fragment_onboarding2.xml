@@ -13,12 +13,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
+        android:contentDescription="@string/todo"
         android:src="@drawable/ic_onboarding2"
         app:layout_constraintBottom_toTopOf="@+id/texto"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/texto"
@@ -39,18 +39,9 @@
         android:backgroundTint="#FFC107"
         android:text="@string/finish"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/texto" />
 
-    <Button
-        android:id="@+id/skip2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="38dp"
-        android:text="@string/skip2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonFinalizar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
